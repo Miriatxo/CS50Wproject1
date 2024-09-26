@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Image Search</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <style>
+    #grid {
+        display: grid;
+        grid-template-rows: 50px auto 50px auto;
+        overflow-x: hidden;
+    }
+
+    .navbar {
+        grid-area: 1 / 1 / 2/ 2;
+    }
+
+    #p1 {
+        grid-area: 2 / 1 / 3/ 2;
+        color: #e8eaed;
+        font-size: 90px;
+        text-align: center;
+        font-family: Roboto, Arial, sans-serif;
+        margin-bottom: 5px;
+    }
+
+    #p2 {
+        grid-area: 3 / 1 / 4/ 2;
+        color: #4487f6;
+        font-size: 16px;
+        font-family: Arial, sans-serif;
+        padding-left: 790px;
+        margin-top: -11px;
+    }
+
+    form {
+        grid-area: 4 / 1 / 5/ 2;
+        text-align: center;
+    }
+
+    form input[type="text"] {
+        border-radius: 30px;
+        border: 0.6px solid #676767;
+        padding-top: 5px;
+        padding-left: 22px;
+        overflow-x: hidden;
+        line-height: 22px;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        text-align: left;
+        line-height: 22px;
+        color: #e8eaed;
+        background-color: transparent !important;
+        width: 77vh;
+        height: 6vh;
+    }
+
+    form input[type="text"]:hover {
+        background-color: #333438 !important;
+        border: none;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    input[type="submit"] {
+        background-color: #303134;
+        border: 1px solid #303134;
+        color: #e8eaed;
+        min-width: 54px;
+    }
+
+    input[type="submit"]:hover {
+        border: 0.2px solid #777; /* White border on hover */
+    }
+    </style>
+</head>
+<body>
+    <div id="grid">
+        <nav class="navbar">
+            <a href="index.html">Google Search</a>
+        </nav>
+
+        <p id="p1">Google</p>
+        <p id="p2">images</p>
+
+        <form action="https://www.google.com/search" method="GET">
+            <input type="text" name="q" required>
+            <input type="hidden" name="tbm" value="isch"> <!-- tells Google it's an image search -->
+            <input type="submit" value="Google Image Search">
+        </form>
+    </div>
+</body>
+</html>
